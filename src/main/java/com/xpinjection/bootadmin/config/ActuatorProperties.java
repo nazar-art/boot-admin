@@ -7,10 +7,9 @@ import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.NotBlank;
 
-@ConfigurationProperties(prefix = "actuator")
-@Getter
-@Setter
 @Validated
+@Getter @Setter
+@ConfigurationProperties(prefix = "actuator")
 public class ActuatorProperties {
 
     @NotBlank

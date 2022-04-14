@@ -9,10 +9,11 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-@Component
 @Primary
+@Component
 @RequiredArgsConstructor
 public class CustomBasicAuthHttpHeaderProvider extends BasicAuthHttpHeaderProvider {
+
     private final ActuatorProperties actuatorProperties;
 
     @Override

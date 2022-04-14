@@ -18,17 +18,19 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import java.util.UUID;
 
-@Configuration(proxyBeanMethods = false)
 @RequiredArgsConstructor
 @EnableConfigurationProperties({
         WebEndpointProperties.class,
         SecurityProperties.class,
         ActuatorProperties.class
 })
+@Configuration(proxyBeanMethods = false)
 public class AdminSecurityConfiguration extends WebSecurityConfigurerAdapter {
-    private static final int TOKEN_VALIDITY_SECONDS = 1_209_600;
-    private static final String ACTUATOR_ROLE = "ACTUATOR";
+
     private static final String ADMIN_ROLE = "ADMIN";
+    private static final String ACTUATOR_ROLE = "ACTUATOR";
+
+    private static final int TOKEN_VALIDITY_SECONDS = 1_209_600;
 
     private final SecurityProperties securityProperties;
     private final AdminServerProperties adminServer;
