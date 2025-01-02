@@ -13,6 +13,7 @@
     <groupId>com.xpinjection</groupId>
     <artifactId>boot-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <name>Spring Boot Admin</name>
     <description>Spring Boot Admin UI</description>
 
@@ -119,7 +120,11 @@
                     <layers>
                         <enabled>true</enabled>
                     </layers>
+                    <image>
+                        <name>lelyak/boot-admin:0.1.0</name>
+                    </image>
                 </configuration>
+
                 <executions>
                     <execution>
                         <goals>
