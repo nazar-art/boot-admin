@@ -10,5 +10,5 @@ spec:
     app: boot-admin
   ports:
     - port: 8081
-  type: NodePort
-#  type: ClusterIP
+#  type: NodePort
+  type: ClusterIP
