@@ -5,19 +5,16 @@ metadata:
   labels:
     app: boot-admin
     tech-stack: springboot
-
 spec:
   selector:
     matchLabels:
       app: boot-admin
   replicas: 1
-
   template:
     metadata:
       name: boot-admin
       labels:
         app: boot-admin
-
     spec:
       serviceAccountName: boot-admin-account
       containers:
@@ -49,8 +46,8 @@ spec:
               cpu: '500m'
               memory: '512Mi'
             limits:
-              cpu: '1000m'
-              memory: '1024Mi'
+              cpu: '500m'
+              memory: '512Mi'
           startupProbe:
             httpGet:
               path: '/admin/health/liveness'

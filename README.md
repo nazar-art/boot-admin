@@ -15,3 +15,21 @@ Local mode is used for development needs when Spring Boot application is run at 
 ### K8S mode
 
 K8S mode is used for deployment in K8S environment. Spring Boot services with Actuator enabled are discovered by the label _tech-stack: springboot_ set at the Service level. Discovery is performed by default in the same namespace where Spring Boot Admin is deployed. To enable discovery via K8S API service account must be configured to have _get, list, watch_ permissions on _pods, services, endpoints_ in the corresponding namespace.
+
+---
+
+Run Configuration:
+
+![run configuration](./boot-admin-run-configuration.png)
+
+Prepare artefact:
+
+    mvn package
+
+Build image:
+
+    docker build . -t lelyak/boot-admin:0.1.0
+
+Import to k3d cluster:
+
+    k3d image import lelyak/boot-admin:0.1.0 -c mycluster
